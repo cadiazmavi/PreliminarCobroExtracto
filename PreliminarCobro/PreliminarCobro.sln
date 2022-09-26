@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreliminarCobro", "PreliminarCobro\PreliminarCobro.csproj", "{1889050A-415B-44E3-A233-5B6DC4F14E5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1889050A-415B-44E3-A233-5B6DC4F14E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1889050A-415B-44E3-A233-5B6DC4F14E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1889050A-415B-44E3-A233-5B6DC4F14E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1889050A-415B-44E3-A233-5B6DC4F14E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B64035-3C86-406A-82D9-90DA6EBCAC7A}
+	EndGlobalSection
+EndGlobal

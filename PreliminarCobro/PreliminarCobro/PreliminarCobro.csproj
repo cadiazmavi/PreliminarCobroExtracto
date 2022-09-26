@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1889050A-415B-44E3-A233-5B6DC4F14E5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PreliminarCobro</RootNamespace>
+    <AssemblyName>PreliminarCobro</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Preliminar de Cobro</ProductName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\PreliminardeCobro\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>finance-calculator.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PreliminarCobro.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ConectaSql">
+      <HintPath>.\ConectaSql.dll</HintPath>
+    </Reference>
+    <Reference Include="fnPassword">
+      <HintPath>.\fnPassword.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net45\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net45\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net45\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColoresApp.cs" />
+    <Compile Include="ConectaSql\ConectaSqlFn.cs" />
+    <Compile Include="ConectaSql\ConexionSql.cs" />
+    <Compile Include="Controllers\ConfigPreliminarController.cs" />
+    <Compile Include="Controllers\FuncionesGlobales.cs" />
+    <Compile Include="Controllers\FuncionesGlobalesSQL.cs" />
+    <Compile Include="Controllers\ClienteInfoController.cs" />
+    <Compile Include="Controllers\DoctosController.cs" />
+    <Compile Include="Controllers\UsuarioInfoController.cs" />
+    <Compile Include="Extensiones.cs" />
+    <Compile Include="Models\ConfigPreliminar.cs" />
+    <Compile Include="Views\DM0312_Loading_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DM0312_Loading_.Designer.cs">
+      <DependentUpon>DM0312_Loading_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Models\ClienteInfo.cs" />
+    <Compile Include="Models\DoctosHijos.cs" />
+    <Compile Include="Models\DoctosPadres.cs" />
+    <Compile Include="Models\UsuarioInfo.cs" />
+    <Compile Include="Views\frmPreliminarCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPreliminarCobro.Designer.cs">
+      <DependentUpon>frmPreliminarCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\DM0312_Loading_.resx">
+      <DependentUpon>DM0312_Loading_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPreliminarCobro.resx">
+      <DependentUpon>frmPreliminarCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="finance-calculator.ico" />
+    <None Include="Resources\06.png" />
+    <Content Include="Resources\1486564168-finance-bank-check_81495.png" />
+    <Content Include="Resources\1486564170-finance-replenishment_81502.png" />
+    <Content Include="Resources\1486564179-finance-saving_81499.png" />
+    <Content Include="Resources\1486564180-finance-financial-report_81493.ico" />
+    <Content Include="Resources\1486564399-close_81512.png" />
+    <Content Include="Resources\1491254077-11document-remove_82912.png" />
+    <Content Include="Resources\1492632353_New.png" />
+    <Content Include="Resources\1492633113_Delete.png" />
+    <Content Include="Resources\1492638222_black_2_audio_simple_repeat_2.png" />
+    <Content Include="Resources\1492638794_Information.png" />
+    <Content Include="Resources\1492639055_calendar.png" />
+    <Content Include="Resources\1492639162_icons_user.ico" />
+    <Content Include="Resources\1492639162_icons_user.png" />
+    <Content Include="Resources\1492639446_Location01.png" />
+    <Content Include="Resources\1492639865_order-history.png" />
+    <Content Include="Resources\1492640112_Single_Tap.png" />
+    <Content Include="Resources\1492640647_edit-find-replace.png" />
+    <Content Include="Resources\1492640682_edit-find.png" />
+    <Content Include="Resources\1492640758_Relation.png" />
+    <Content Include="Resources\1492642215_edit-find.png" />
+    <Content Include="Resources\1492642230_edit-find-replace.png" />
+    <Content Include="Resources\1492642625_office-06.png" />
+    <Content Include="Resources\1492642889_aiga_cashier.png" />
+    <Content Include="Resources\1492643287_credit_debit_atm_card_coin_currency_euro_money_price_finance_financial.png" />
+    <Content Include="Resources\1492692368-7email_83536.png" />
+    <Content Include="Resources\1495141562_ic_keyboard_arrow_up_48px.png" />
+    <Content Include="Resources\1495142736_ic_keyboard_arrow_down_48px.png" />
+    <Content Include="Resources\1496345901_Gnome-Go-Next-48 - copia.png" />
+    <Content Include="Resources\1496345901_Gnome-Go-Next-48.png" />
+    <Content Include="Resources\1496357934_EBay.png" />
+    <Content Include="Resources\Actualizar-50.png" />
+    <Content Include="Resources\AddArticulo_opt.png" />
+    <Content Include="Resources\administrativetools_administrativas_3899.ico" />
+    <Content Include="Resources\Afectar.png" />
+    <Content Include="Resources\anadir-nuevo-documento.png" />
+    <Content Include="Resources\angle-arrow-down_icon-icons.com_73683.png" />
+    <Content Include="Resources\ApoyoCobranza.png" />
+    <Content Include="Resources\Atención Filled-50.png" />
+    <Content Include="Resources\Atención-48.png" />
+    <Content Include="Resources\back-icon.png" />
+    <Content Include="Resources\Basura-50.png" />
+    <Content Include="Resources\Basura-64.png" />
+    <Content Include="Resources\bloggif_59a1a7a26e5b9.png" />
+    <Content Include="Resources\bloggif_59a1a84cabc47.png" />
+    <Content Include="Resources\bloggif_59a1ad2badda4.png" />
+    <Content Include="Resources\Button-Info-icon.png" />
+    <Content Include="Resources\Búsqueda-48.png" />
+    <Content Include="Resources\caja.png" />
+    <Content Include="Resources\caja1.png" />
+    <Content Include="Resources\caja2.png" />
+    <Content Include="Resources\Cancelar-50.png" />
+    <Content Include="Resources\candado.png" />
+    <Content Include="Resources\CapRelacionado.png" />
+    <Content Include="Resources\CapRelacionado_1.png" />
+    <Content Include="Resources\Cash_register.png" />
+    <Content Include="Resources\check1.png" />
+    <Content Include="Resources\check_ok_accept_apply_1582.png" />
+    <Content Include="Resources\Comprobado-48.png" />
+    <Content Include="Resources\contactlist_theuser_804.png" />
+    <Content Include="Resources\Copiar-50.png" />
+    <Content Include="Resources\Cursor de mano-64.png" />
+    <Content Include="Resources\Dinero Flecha.png" />
+    <Content Include="Resources\DownArrow.png" />
+    <Content Include="Resources\drodpownArrow.png" />
+    <Content Include="Resources\duplicar-contenido.png" />
+    <Content Include="Resources\Editar-50.png" />
+    <Content Include="Resources\emailmessage_correoelectronic_6970.png" />
+    <Content Include="Resources\finance-calculator.ico" />
+    <Content Include="Resources\finance-calculator.png" />
+    <Content Include="Resources\fingerprint.png" />
+    <Content Include="Resources\garantia.ico" />
+    <Content Include="Resources\generatetables_ok_home_out_edit_generar_1491.ico" />
+    <None Include="Resources\grafica1.png" />
+    <None Include="Resources\grafica.png" />
+    <Content Include="Resources\Guardar archivo-48.png" />
+    <Content Include="Resources\Guardar cerrar-50.png" />
+    <Content Include="Resources\iiiii.png" />
+    <Content Include="Resources\import.png" />
+    <Content Include="Resources\itextsharp.dll" />
+    <Content Include="Resources\kmail_mail_pen_817.png" />
+    <Content Include="Resources\Loading.gif" />
+    <Content Include="Resources\Loading_icon.ico" />
+    <Content Include="Resources\MailCelTel2.png" />
+    <Content Include="Resources\mayor que.jpg" />
+    <Content Include="Resources\menor que.jpg" />
+    <Content Include="Resources\MenuGiro1.png" />
+    <Content Include="Resources\MenuGiro2.png" />
+    <Content Include="Resources\MenuInicioDrow.png" />
+    <Content Include="Resources\MenuInicioUp.bmp" />
+    <Content Include="Resources\MenuInicioUp.png" />
+    <Content Include="Resources\Microsoft.Office.Interop.Excel.dll" />
+    <None Include="Resources\nip.png" />
+    <None Include="Resources\moneda.png" />
+    <Content Include="Resources\pause-icon.png" />
+    <Content Include="Resources\pdf.png" />
+    <Content Include="Resources\pvCon_01.dll" />
+    <None Include="Resources\RD.png" />
+    <Content Include="Resources\responder.png" />
+    <Content Include="Resources\savedisk_floppydisk_guardar_1543.png" />
+    <Content Include="Resources\save_1.png" />
+    <Content Include="Resources\Search.png" />
+    <Content Include="Resources\servicios.png" />
+    <Content Include="Resources\SHMFinger.png" />
+    <Content Include="Resources\Sin título-1.png" />
+    <Content Include="Resources\System-Info-icon.png" />
+    <None Include="Resources\tarjetaMA2.png" />
+    <None Include="Resources\tarjetaVIU2.png" />
+    <None Include="Resources\tarjeta2.png" />
+    <Content Include="Resources\tarjetaMA.png" />
+    <Content Include="Resources\TerminalPagos.png" />
+    <Content Include="Resources\TiempoAire.png" />
+    <Content Include="Resources\unlock.png" />
+    <Content Include="Resources\upArrow.png" />
+    <Content Include="Resources\User_Manual-80_icon-icons.com_57245.ico" />
+    <Content Include="Resources\usuario.png" />
+    <None Include="Resources\warning-error-icon-png-33.png" />
+    <Content Include="Resources\XFMail_mail_contacts_5985.png" />
+    <Content Include="Resources\zwCzBBxN.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
